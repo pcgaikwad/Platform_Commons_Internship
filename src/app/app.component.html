@@ -1,0 +1,39 @@
+<div style="background-color: darkslategrey; height: 100vh;">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-dark p-4">
+      <h5 class="text-white h4">Assignment</h5>
+      <span class="text-muted">Prathmesh Gaikwad</span>
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+
+  
+  <div class="container border border-dark my-5" style="background-color: bisque; border-radius: 10px; ">
+    <h2 class="text-center" style="color: brown;">Completed by Prathmesh Chhaganrao Gaikwad</h2>
+    <i class="fa-thin fa-chart-pyramid"></i>
+    <h3>Name List</h3>
+    
+    <cite title="Source Title">Click on below dropdown list to see age of related person</cite>
+    <br>
+   
+    <select class="form-select" aria-label="Default select example" [(ngModel)]="selected" placeholder="dkfjsd">
+      <option *ngFor="let p of parentData" [value]="p.id">
+        {{p.name}}
+      </option>
+    </select>
+
+    <br>
+
+    
+    <app-todos [idVal]="selected" (callback)="childCallback($event)"> </app-todos>
+
+
+  </div>
+</div>

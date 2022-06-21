@@ -1,0 +1,11 @@
+
+
+<div class="alert alert-success" role="alert" style="font-size: 1rem; ">
+  <h5>Age</h5>
+</div>
+
+<div [(ngModel)]="selected" class="alert alert-dark" role="alert" >
+    <option *ngFor="let p of data" [value]="p.id">
+      {{ p.age }}
+    </option>
+</div>
